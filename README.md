@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Leesee — Interface du blog
 
-## Getting Started
+Interface web d'un blog permettant de créer, consulter, modifier et supprimer des articles.
 
-First, run the development server:
+Le projet utilise Next.js, React, TypeScript et Tailwind CSS. Il communique avec une API développée avec Flask et SQLAlchemy.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fonctionnalités
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Afficher tous les articles
+- Créer un article avec un titre, un auteur et un contenu
+- Modifier un article existant
+- Supprimer un article
+- Afficher des messages d'erreur en cas de problème avec l'API
+- Interface en français adaptée aux ordinateurs et aux appareils mobiles
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Prérequis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js
+- npm
+- Le backend Flask du projet
 
-## Learn More
+## Installation et exécution locale
 
-To learn more about Next.js, take a look at the following resources:
+1. Cloner ce dépôt.
+2. Ouvrir un terminal dans le dossier du frontend.
+3. Installer les dépendances :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Créer un fichier `.env.local` à la racine du frontend et ajouter :
 
-## Deploy on Vercel
+   ```env
+   NEXT_PUBLIC_API_URL=http://127.0.0.1:5000
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Démarrer le backend Flask en suivant les instructions de son README.
+6. Démarrer le frontend :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+
+7. Ouvrir `http://localhost:3000` dans le navigateur.
+
+## Configuration de l'API
+
+La variable `NEXT_PUBLIC_API_URL` définit l'adresse du backend utilisé par l'interface.
+
+En développement local, sa valeur est :
+
+`http://127.0.0.1:5000`
+
+En production, cette variable doit contenir l'adresse publique du backend déployé.
+
+## Déploiement
+
+Le frontend sera déployé sur Vercel.
+
+**Adresse du site en ligne :** à ajouter après le déploiement.
+
+## Technologies utilisées
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- API REST avec Flask
