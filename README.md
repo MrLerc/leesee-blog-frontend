@@ -1,4 +1,4 @@
-# Leesee — Interface du blog
+# Frontend du blog
 
 Interface web d'un blog permettant de créer, consulter, modifier et supprimer des articles.
 
