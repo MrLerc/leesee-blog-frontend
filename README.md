@@ -56,9 +56,8 @@ En production, cette variable doit contenir l'adresse publique du backend déplo
 
 ## Déploiement
 
-Le frontend sera déployé sur Vercel.
-
-**Adresse du site en ligne :** à ajouter après le déploiement.
+- **Site en ligne :** https://leesee-blog-frontend.vercel.app/
+- **API backend :** https://leesee-blog-backend.onrender.com/
 
 ## Technologies utilisées
 
